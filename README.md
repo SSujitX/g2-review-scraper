@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 
 ```bash
-git clone https://github.com/your-username/g2-review-scraper .git
+git clone https://github.com/your-username/g2-review-scraper.git
 ```
 
 2. Navigate to the project directory:
