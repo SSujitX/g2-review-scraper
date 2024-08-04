@@ -1,13 +1,7 @@
-
-import requests
-from selectolax.parser import HTMLParser
 import pandas as pd
 import os
-import json
-import re
 from seleniumbase import SB
 from rich import print
-import time
 
 
 root_path = os.path.dirname(os.path.abspath(__file__))
