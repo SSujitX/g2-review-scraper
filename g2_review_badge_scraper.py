@@ -13,11 +13,13 @@ import time
 root_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(root_path)
 
-csv_file = 'g2_badge.csv'
+old_csv_file = 'g2 product.csv'
+new_csv_file = 'g2_badge.csv'
+
 last_index = 0
 
 badge_css = 'div[class="status-badge__label"]'
-read_path = os.path.join(root_path,'g2 only product.csv')
+read_path = os.path.join(root_path, old_csv_file)
 readcsv = pd.read_csv(read_path)
 
 productsLinks = readcsv['Product Link'].to_list()
@@ -46,7 +48,7 @@ with SB(uc=True) as sb:
             }
         
             df = pd.DataFrame([company_data])
-            df.to_csv(csv_file, mode='a', index=False, header=not os.path.exists(csv_file))
+            df.to_csv(new_csv_file, mode='a', index=False, header=not os.path.exists(new_csv_file))
 
         except Exception as e:
             print(f">= Error processing link {index} - {productLink}: {e}")
